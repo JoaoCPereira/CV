@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1.5cm,right=9.5cm,marginparwidth=6.8cm,marginparsep=1cm,top=1.5cm,bottom=1.5cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% 093145 107896 3C6478 93A661
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{93A661}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightBlue}{HTML}{3C6478}
+\colorlet{heading}{LightBlue}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+
+\name{João Rodrigues}
+
+\tagline{ }
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail
+  \email{joaocpereirar@gmail.com}
+  \phone{+351 969817624}
+  \linkedin{joao-cp-rodrigues}
+  \github{JoaoCPereira}
+  \website{joaorodrigues.pages.dev}
+
+  %\location{Ponte de Lima, Viana do Castelo, Portugal}
+  
+  \paragraph{}
+  {\large\normalsize\color{LightGrey} Hello, my name is João Rodrigues, and I have a solid background in \textbf{Software Engineer}, having completed my \textbf{Bachelor's degree in Computer Science} at the University of Minho in 2021. Currently, I am in the final stage of my \textbf{Master's degree in Computer Science}, specializing in \textbf{Post-Quantum Cryptography}, \textbf{Information Security}, and \textbf{Computer Graphics}.
+    }
+
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+% Olá, o meu nome é João Rodrigues e possuo uma formação sólida em Ciências da Computação, tendo concluído a Licenciatura em Ciências da Computação na Universidade do Minho em 2021. Atualmente, encontro-me na fase final do Mestrado em Engenharia Informática, com uma especialização em Criptografia Pós-Quântica, Segurança da Informação e Computação Gráfica.
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+%\cvsection[page1sidebar]{Experiência}
+
+%\cvsection[]{Experiência}
+
+%\cvevent{Disertação}{Universidade do Minho}{March 2022-2023}{Braga, Portugal}
+%A minha dissertação focou-se na pesquisa e análise dos avanços na criptografia pós-quântica, explorando o projeto Post-Quantum Cryptography da NIST. Realizei a instalação da biblioteca LiboQS, analisando os resultados dos algoritmos pós-quânticos padrão estabelecidos pelo NIST. Além disso, implementei esses algoritmos nas bibliotecas Cryptography e AsynIO, conduzindo os respetivos testes, análise. Estudo sobre os desafios da implementação destes algoritmos em smart cards, especificamente, o cartão de cidadão.
+
+%A minha dissertação de mestrado centrou-se na análise dos avanços recentes em criptografia pós-quântica, explorando o projeto \textbf{Post-Quantum Cryptography} da \textbf{NIST}. Preparei um ambiente de trabalho que permitiu trabalhar com algoritmos que possuem chaves e certificados de tamanho superior aos algoritmos clássicos de segurança. Para isso, substituí o OpenSSL padrão do sistema operativo pelo \textbf{OQS-OpenSSL}. Utilizando a biblioteca LiboQS em C, integrei os algoritmos pós-quânticos nas bibliotecas Cryptography e AsynIO em Python. Na análise comparativa, avaliei a segurança e o desempenho de cada algoritmo, assim como a perda de eficiência ao utilizar Python em comparação com C. Também examinei os avanços feitos em smart cards, especificamente no Portuguese National Identity Card, explorando suas limitações, como tamanho de RAM, ausência de aceleradores para os novos algoritmos, implementação em larga escala e técnicas de masking.
+
+\cvsection[]{Experience}
+
+\cvevent{Dissertation}{Universidade do Minho}{2022-2023}{Braga, Portugal}
+My master's thesis focused on examining recent advancements in \textbf{post-quantum cryptography}, specifically exploring the Post-Quantum Cryptography project by the \textbf{NIST}. I set up a working environment to handle algorithms with \textbf{cryptographic keys} and \textbf{certificates} larger than traditional security algorithms, achieving this by replacing the standard operating system's OpenSSL with \textbf{OQS-OpenSSL}. Using the \textbf{LiboQS} library in \textbf{C}, I integrated post-quantum algorithms into the \textbf{Cryptography} and \textbf{AsynIO} libraries in \textbf{Python}. In the comparative analysis, I assessed the security and performance of each algorithm and examined the efficiency loss when using Python compared to C. Additionally, I investigated advancements in \textbf{smart cards}, focusing on the \textbf{Portuguese National Identity Card}. This exploration covered limitations such as \textbf{RAM size}, \textbf{lack of accelerators} for new algorithms, large-scale implementation, and \textbf{masking techniques}.
+
+
+ %My dissertation focused on researching and analyzing latests advancements in \textbf{post-quantum cryptography}, exploring the \textbf{NIST}'s Post-Quantum Cryptography project. I performed the installation of the \textbf{LiboQS} library, analyzing the results of the post-quantum algorithms established to standards by NIST. Additionally, I implemented these algorithms in the \textbf{Cryptography} and \textbf{AsynIO} libraries, conducting respective tests and analyses. I also studied the challenges of implementing these algorithms on smart cards, specifically, the cartão de cidadão.
+
+\divider
+
+%\cvevent{Ambiente académico}{Universidade do Minho}{March 2017-2022}{Braga, Portugal}
+%Nesses cinco anos, desenvolvi vários projetos, quer individualmente quer em equipa. Estes projetos envolveram atividades como planeamento, implementação e monitorização, abrangendo diversas áreas, tais como bases de dados em SQL (MySQL) e NoSQL (Neo4j), programação orientada a objetos em Java e C++, computação paralela e autómatos. Durante este período, aprimorei as minhas competências matemáticas em análise numérica, lógica, geometria e álgebra.
+
+\cvevent{Academic Environment}{Universidade do Minho}{2017-2022}{Braga, Portugal}
+Throughout this five-year period, I engaged in various projects, both independently and collaboratively. These projects encompassed tasks such as \textbf{planning}, \textbf{design}, \textbf{implementation}, and \textbf{monitoring}, spanning diverse areas including \textbf{SQL} (MySQL) and \textbf{NoSQL} (Neo4j) database management, object-oriented programming in \textbf{Java} and \textbf{C++}, parallel computing, functional programming, imperative programming, turing machine and formal languages, language processing, and compilers. During this time frame, I advanced my mathematical proficiency in numerical \textbf{analysis}, \textbf{logic}, \textbf{geometry}, and \textbf{algebra}.
+
+%Over these five years, I undertook various projects, both individually and as part of a team. These projects involved activities such as planning, design, implementation, and monitoring, covering different areas such as \textbf{SQL} (MySQL) and \textbf{NoSQL} (Neo4j) database management, object-oriented programming in \textbf{Java} and \textbf{C++}, parallel computing, and turing machine. During this period, I enhanced my mathematical skills in numerical \textbf{analysis}, \textbf{logic}, \textbf{geometry}, and \textbf{algebra}.
+
+\medskip
+
+%\cvsection{FORMAÇÃO ACADÉMICA}
+
+\cvsection{
+ACADEMIC EDUCATION}
+
+\cvevent{Master of Computer Science}{Universidade do Minho}{2021 -- Present}{Braga, Portugal}
+
+\smallskip
+\textbf{
+Cryptography and Information Security}
+\normalsize\par
+\smallskip
+
+\begin{itemize}
+    %\item Identificação dos riscos e levantamento de requisitos de segurança dos sistemas;
+    %\item Realização de modelos de ameaças em sistemas de “software”;
+    %\item Criptografia Clássica, como Grupos Cíclicos, Curvas Elípticas, Provas de Conhecimento e Assinatura Digital;
+    %\item Criptografia Pós-Quântica;
+    \item Identification of risks and security requirements for systems;
+    \item Development of threat models in software systems;
+    \item Classical Cryptography, including cyclic groups, elliptic curves, knowledge proofs, and digital signatures;
+    \item Post-Quantum Cryptography, Lattice-Based, Hash-Based;
+\end{itemize}
+
+\textbf{Computer Graphics}
+\normalsize\par
+\smallskip
+
+\begin{itemize}
+    \item Models for local and global illumination, empirical and physics-based (Phong, Cook-Torrance, Ward);
+    \item Light transport mechanisms, BRDF, and the rendering equation;
+    \item Programming of the graphics pipeline using languages like GLSL;
+    \item Deep Learning Networks for image generation and object recognition in images;
+\end{itemize}
+
+\divider
+
+\cvevent{Bachelor's Degree in Computer Science}{Universidade do Minho}{2017 -- 2021}{Braga, Portugal}
+%%\nocite{*}
+
+\begin{itemize}
+    %\item Utilizar vários tipos de paradigmas de computação na resolução de problemas;
+    %\item Desenvolver implementações computacionais, produzindo códigos em diferentes linguagens de programação;
+    %\item Planear, implementar e monitorizar sistemas de bases de dados;
+    %\item Analisar de forma crítica as soluções produzidas no computador;
+    %\item Usar cálculo e raciocínio lógico e matemático na construção de argumentos rigorosos, incluindo provas formais;
+    \item Apply different computing paradigms to craft innovative solutions, such as, multi-clause function definitions and polymorphism;
+    \item Develop robust computational solutions, writing code across various programming languages, in \textbf{Python}, \textbf{C}, \textbf{C++}, \textbf{Java};
+    \item Utilizing efficient data structures and designing algorithms upon them (\textbf{AVL trees}, \textbf{hash tables}, and \textbf{heaps});
+    \item Strategically plan, implement, and oversee dynamic database systems, \textbf{SQL} (\textbf{MySQL}), \textbf{NoSQL} (\textbf{Neo4j} and \textbf{MongoDB});
+    %\item Conduct critical analysis of computer-generated solutions;
+    \item Knowledge of \textbf{Graph Theory} in the modeling and resolution of problems;
+    \item Apply advanced calculation, logical reasoning, and mathematical insight to construct compelling arguments, including formal proofs;
+\end{itemize}
+
+\end{fullwidth}
+
+\medskip
+
+\cvsection[page2sidebar]{PROGRAMMING SKILLS}
+
+\input{page1sidebar}
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}
